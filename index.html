@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+        }
+
+        header div.relative {
+            position: relative;
+        }
+
+        header div.absolute {
+            position: absolute;
+            top: 0;
+            right: 500px;
+        }
+
+        header img {
+            text-align: right;
+            float: right;
+        }
+
+        header ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 80%;
+            float: right;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        header li {
+            float: left;
+        }
+
+        header li a,
+        .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        header li a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        header li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        div.fixed {
+            background-color: #f1f1f1;
+            position: fixed;
+            bottom: 0;
+            top: 0px;
+            left: 0px;
+            width: 20%;
+            border: 3px solid #f1f1f1;
+        }
+
+        div.box1 {
+            float: right;
+            /* position: relative;
+            left: 70%;
+            top: 550px; */
+            background-color: #f9f9f9;
+            width: 20%;
+            height: 1500px;
+            border: 15px solid #f9f9f9;
+            padding: 50px;
+            margin: 20px;
+        }
+
+
+
+        div.box2 {
+            clear: none;
+            overflow: auto;
+            position: relative;
+            background-color: #f9f9f9;
+            top: 20px;
+            left: 20%;
+            width: 40%;
+            height: 2400px;
+            border: 15px solid #f9f9f9;
+            padding: 50px;
+            margin: 20px;
+        }
+
+        main div.box3 {
+            position: absolute;
+            top: 2200px;
+            left: 69.7%;
+            width: 20%;
+            height: 758px;
+            background-color: #f9f9f9;
+            border: 15px solid #f9f9f9;
+            padding: 50px;
+            margin: 20px;
+        }
+
+
+        .c1 {
+            float: right;
+            /* position: absolute;
+            left: 400px; */
+        }
+
+        .c2 {
+            clear: none;
+            text-align: left;
+            -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+            filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+        }
+
+        footer.ft {
+            display: block;
+            clear: both;
+            text-align: center;
+            padding: 15px;
+            border: 10px solid #fffefe;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .c3 {
+
+            color: rgb(56, 59, 40);
+            -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+            filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, .5));
+        }
+
+        img.c1 {
+            vertical-align: bottom;
+        }
+
+        main table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        main th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        main tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        main th:hover {
+            background-color: #f5f5f5;
+        }
+
+        .a1 a {
+            text-decoration: none;
+        }
+
+        .abcd li a {
+            text-decoration: none;
+        }
+
+        .a1 a:hover {
+            color: red;
+        }
+
+        .abcd li a:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="relative">
+            <img src="银河2.jpg" width="80%" height="500px">
+            <div class="absolute">
+                <p style="color: rgb(143, 81, 81);">The Milky Way is so beautiful！</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://baike.baidu.com/item/%E5%A4%AA%E9%98%B3/24010">太阳</a></li>
+                <li><a href="https://baike.baidu.com/item/%E6%9C%88%E7%90%83/30767">月球</a></li>
+                <li class="dropdown">
+                    <a href="https://baike.baidu.com/item/%E5%85%AB%E5%A4%A7%E8%A1%8C%E6%98%9F/7990672"
+                        class="dropbtn">八大行星</a>
+                    <div class="dropdown-content">
+                        <a href="https://baike.baidu.com/item/%E6%B0%B4%E6%98%9F/135917">水星</a>
+                        <a href="https://baike.baidu.com/item/%E9%87%91%E6%98%9F/19410">金星</a>
+                        <a href="https://baike.baidu.com/item/%E5%9C%B0%E7%90%83/6431">地球</a>
+                        <a href="https://baike.baidu.com/item/%E7%81%AB%E6%98%9F/5627">火星</a>
+                        <a href="https://baike.baidu.com/item/%E6%9C%A8%E6%98%9F/222105">木星</a>
+                        <a href="https://baike.baidu.com/item/%E5%9C%9F%E6%98%9F/136354">土星</a>
+                        <a href="https://baike.baidu.com/item/%E5%A4%A9%E7%8E%8B%E6%98%9F/21805">天王星</a>
+                        <a href="https://baike.baidu.com/item/%E6%B5%B7%E7%8E%8B%E6%98%9F/30351">海王星</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="fixed">
+            <h1>目录</h1>
+            <ol>
+
+                <li class="a1"><a href="#1">名称来源</a></li>
+                <br>
+
+                <li class="a1"><a href="#2">演化进度</a></li>
+                <br>
+
+                <li class="a1"><a href="#2">形成原因</a></li>
+                <br>
+
+                <li class="a1"><a href="#2">最新发现</a></li>
+                <br>
+            </ol>
+        </div>
+        <div class="box1">
+            <h1 style="text-align: center;">探索研究</h1>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp美国国家航空航天局于2009年9月10公布了“哈勃”太空望远镜自五月开始修复后所拍摄的首批深空照片。这张图片被称之为“蝴蝶照”，实际是一个恒星所释放出来的能量极大的气束。“蝴蝶”的翅膀是由气流形成的气涡，其温度超过华氏36000度。气流的速度达到每小时60万英里，如果按照这个速度，从地球到月亮只需要24分钟。这颗恒星距离我们银河系大约有3800光年。整个蝴蝶星云宽达2光年，大约是太阳到半人马星座距离的一半。
+            </p>
+            <img src="探索研究.jpg" width="200px" height="150px" style="float: right;">
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp事实上，当恒星的时候，将展现它最美的一面。 像太阳这类低质量的恒星，在演化成白矮星前会抛出它们外层的气体。
+                这膨胀的气体通常会形成无比壮观而美丽的行星状星云，然后在数千年里渐渐地暗下去。
+                这是蝴蝶星云（M2-9）的假色图像，它有着一对像翅膀的结构并且惊人地对称。 在它的中心有一个气体盘面，盘面的中央有两颗互绕运行的恒星，它们之间的距离是冥王星轨道的10倍。
+                即将恒星从气体盘面抛出气体，形成这样的双极外观。如今对形成这种行星状星云的物理机制还不是很清楚。它距离我们约2100光年远。位于人马座。</p>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNASA的哈伯望远镜从扰动的气体蒸炉中观测到一颗名为N159的恒星诞生的过程，它位于17万光年外大麦哲伦星系中，从这颗大质量高温新恒星吹出的恒星风，将外围广达150光年的星云外型塑成了如圆弧、长柱和细丝等特殊的形状。
+            </p>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp这是天文学家首度得以仔细观察这种罕见的密实、由高度游离气体所组成的蝴蝶形星云，它通常深藏于发光气体与黑暗尘云的大漩涡中心。透过哈伯望远镜的高解析力，天文学家测得其直径约
+                2光年（视直径 2"）。</p>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp这种双极形星云可能来源之一是，从隐藏在吸收带中央的大质量恒星（太阳质量的十倍以上）所喷出的气体。这类恒星的温度相当高，它们的辐射压甚至能将从周围气体盘落入的气体再沿着两极反推出去。
+            </p>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp这次的观测，是大麦哲伦星系年轻大质量恒星搜寻计画的一部份。要观测到如此大质量、又刚诞生不久的新恒星，机会相当难得。在星云中，红色部分是氢、黄色则是高游离态的氧所发出来的。
+            </p>
+            <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp这次的观测是由欧洲天文学家 Mohammad Heydari-Malayeri （法国巴黎天文台）与 Michael Rosa
+                （德国欧南天文台）、Vassilis Charmandaris （巴黎天文台）、Lise Deharveng （法国马赛天文台）、Hans Zinnecker
+                （德国天文物理协会）共同合作，他们的研究结果发表于欧洲天文与天文物理期刊上。</p>
+        </div>
+
+        <div class="box2">
+            <img src="蝴蝶星云.jpg" style="float: right ;" width="300px" class="c1">
+            <p class="c2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp蝴蝶星云（M2-9）也叫巴比龙星云（Papillon
+                Nebula）。巴比龙星云的法语意思是蝴蝶，它的另一个名字是N159。是蛇夫座美丽的行星状星云。大小约是150光年，位于我们的邻居星系大麦哲伦星云，和地球距离大约是17万光年。
+                与其它行星状星云一样，它也是类太阳恒星演化晚期的产物。它有一对非常对称的像蝴蝶翅膀一样的双极结构。对形成这种双极型行星状星云的物理机制的细节还不是很清楚。可以
+                肯定的是，在它的中心有一个气体盘面，盘面的中央有两颗互相绕转的恒星。就是这一对恒星在即将死亡的时候，从气体盘面抛出气体，灼热的气体向两端扩散形成了这样的双极外观。
+                与其类似的还有NGC 6302（Butterfly Nebula），该星云位于天蝎座中，二者俗名都叫蝴蝶星云。因此网上绝大部分新闻或图片分不清这两个星云。</p>
+            <br>
+            <table>
+                <tr>
+                    <th>中文名</th>
+                    <th>蝴蝶星云（或译为：双喷流星云）</th>
+                    <th>赤 经</th>
+                    <th>5时39分38.99秒</th>
+                </tr>
+                <tr>
+                    <th>外文名</th>
+                    <th>Papillon Nebula</th>
+                    <th>赤 纬</th>
+                    <th>-69°44′35.99″</th>
+                </tr>
+                <tr>
+                    <th>别 名</th>
+                    <th>双喷流星云， 蝶形星云， 蝶翼</th>
+                    <th>距地距离</th>
+                    <th>2100光年(650 秒差距)</th>
+                </tr>
+                <tr>
+                    <th>发现者</th>
+                    <th>鲁道夫·闵考斯基</th>
+                    <th>半 径</th>
+                    <th>0.7 ly (0.2 pc)</th>
+                </tr>
+                <tr>
+                    <th>发现时间</th>
+                    <th>1947年</th>
+                    <th>可视面积</th>
+                    <th>115″× 18″</th>
+                </tr>
+                <tr>
+                    <th>视星等</th>
+                    <th>14.7 等</th>
+                    <th>可分辨星系</th>
+                    <th>大麦哲伦星云(LMC)</th>
+                </tr>
+                <tr>
+                    <th>绝对星等</th>
+                    <th>5.6 等</th>
+                    <th>显著特色</th>
+                    <th>双极逸流、双极星云</th>
+                </tr>
+            </table>
+            <br>
+            <h1 id="1">1.名称来源</h1>
+            <br>
+            <img src="蝴蝶星云1.jpg" style="float: right;" width="300px">
+            <p class="c2">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp在寻找大质量恒星的过程中，哈勃太空望远镜又看到另一个很壮观的恒星形成区。巴比龙星云法文的意思是蝴蝶，它的另一个名字是N159，蝴蝶星云，学名闵考斯基2-9，缩写为M2-9（也称为闵考斯基的蝴蝶、蝶翼星云或就是双喷流星云）。它的大小约是150光年，位于我们的邻居星系大麦哲伦星云，和我们的距离大约是17万光年。在下面这张照片中，可以很清楚的看到许多明亮的新恒星、由尘埃组成的暗黑丝状物、炽热发光的氢气及中心附近的不寻常致密云气。
+                中心云气的形状为什么会像是哑铃？原因仍然不清楚，有可能是由一颗还没看到的大质量恒星所造成的，而这颗恒星有很厚气盘。
+                是鲁道夫·闵考斯基在1947年发现的一个行星状星云。它位于天蝎座，与地球的距离为2100光年。这个双极星云特有的双瓣是由中心恒星发出的物质构成的。因为瓣的形状相信是由极性的喷流造成的，因此天文学家曾经谑称这个星云为双喷流星云，但它的形状更像是蝴蝶的翅膀。哈勃太空望远镜在1990年代曾拍摄这个星云的影像。
+            </p>
+            <br>
+            <h1 id="2">2.演化进度</h1>
+            <br>
+            <img src="演化进度.jpg" style="float: right;" width="300px">
+            <p class="c2">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbspM2-9呈现星云中心的一个联星系统壮观的景象。联星系统的主要成员是一颗已经走到生命周期尽头的主序星，外层的气体已经喷发成为红巨星，并且炙热的核心即将发展成为白矮星；相信在它生命的早期是一颗类似太阳恒星。另一颗恒星，联星中质量较小的一颗，以非常靠近的轨道绕行，极可能已笼罩在对方扩散开来的恒星大气层内，经由彼此的交互作用创造了这个星云。天文学家的理论指出，一颗恒星的引力场可以从另一颗恒星的表面牵引出气体，并抛掷到太空中扩散形成薄而稠密的盘面。这样的盘面成功的推算出气体排出形成像M2-9的外观。
+                当正常的恒星在抛去了它们外层的气壳后，就会蜕变成白矮星。它们所抛出去的扩张气壳，经常会形成非常美丽动人的行星状星云，然后在数千年内慢慢消散无踪。M2-9是一个蝴蝶形状的行星状星云
+                ，距离我们2100光年。
+                在星云的中心，有两个恒星以大约10倍于冥王星轨道的距离，在一个气盘内互相绕行。恒星所抛出去的气壳，在这个气盘的影响下，形成了双极瓣的形态。</p>
+            <br>
+            <h1 id="3">3.形成原因</h1>
+            <br>
+            <p class="c2">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp蝴蝶星云因为高速的恒星风吹进了盘面，而戏剧性的快速膨胀，影响之下产生了巨大的垂直于盘面的细致沙漏型翼，这些翼的投影呈现出蝴蝶翅膀的形象。估计最外层的年龄已经有1200年之久（Schwarz
+                et al. 1997）。
+                借助哈勃太空望远镜这个超级眼镜，我们能够欣赏这个壮丽景观，一个新星遗迹留下的行星状星云酷似一只展翅的“蝴蝶”，是由于灼热的气体向两端扩散形成的。
+                一颗恒星产生了一个宇宙“蝴蝶”。宇航员在执行第五次哈勃太空望远镜维修任务时，把这台新相机安装在它上面。哈勃科研组公布了这台升级后的望远镜拍到的第一批照片。“蝴蝶”状天体是一个行星状星云。天文学家借助哈勃太空望远镜的光学过滤器，可以准确查明该星云的化学组成、温度和密度，并追踪恒星。位于星云中间的恒星在尘埃团的影响下，显得特别昏暗。它的质量曾是我们的太阳的5倍。在过去2千年间，这颗恒星把包裹在它外层的大部分气体都驱散开，形成如梦如幻的“蝴蝶翅膀”，这两个“翅膀”的延伸长度大约是2光年。
+            </p>
+            <br>
+            <h1 id="4">4.最新发现</h1>
+            <br>
+            <img src="最新发现.png" style="float: right;" width="300px">
+            <p class="c2">
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2020年6月23日，NASA公布了两张哈勃太空望远镜拍摄的行星状星云新图像，分别NGC6302“蝴蝶星云”和NGC7027。蝴蝶星云是位于天蝎座的一个行星状星云，距离地球约2417光年。它的中央有两个围绕对方运行的恒星，质量约为太阳的0.64倍。
+            </p>
+            <br>
+
+
+
+        </div>
+        <div class="box3">
+            <h1>天文名词</h1>
+            <ul class="abcd">
+                <li><a href="https://baike.baidu.com/item/%CE%B3%E5%B0%84%E7%BA%BF%E5%A4%A9%E6%96%87%E5%8F%B0/5912864">
+                        γ射线天文台</a></li>
+                <li><a href="https://baike.baidu.com/item/%CE%B3%E5%B0%84%E7%BA%BF%E6%BA%90/4311627"> γ射线源</a></li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E7%9F%AE%E7%90%83%E7%8A%B6%E6%98%9F%E7%B3%BB&pic=1&sug=1&enc=utf8">矮球状星系</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E7%9F%AE%E6%97%8B%E6%B6%A1%E6%98%9F%E7%B3%BB&pic=1&sug=1&enc=utf8">
+                        矮旋涡星系</a></li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E8%89%BE%E8%BE%BE%E5%B0%8F%E8%A1%8C%E6%98%9F243%E5%8F%B7&pic=1&sug=1&enc=utf8">
+                        艾达小行星243号</a></li>
+                <li><a href="https://baike.baidu.com/item/%E8%89%BE%E5%8D%AB/8945054">艾卫</a></li>
+                <li><a href="https://baike.baidu.com/item/%E6%9A%97%E6%99%95/9896739">暗晕</a></li>
+                <li><a
+                        href="https://baike.baidu.com/item/%E7%88%B1%E6%96%AF%E5%9F%BA%E6%91%A9%E6%98%9F%E4%BA%91/5490354">爱斯基摩星云</a>
+                </li>
+                <li><a href="https://baike.baidu.com/item/%E5%B7%B4%E5%BE%B7%E7%AA%97/4604228">巴德窗</a></li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E5%B7%B4%E5%BE%B7-%E9%9F%A6%E5%A1%9E%E6%9E%97%E5%85%8B%E5%8D%8A%E5%BE%84&pic=1&sug=1&enc=utf8">巴德-韦塞林克半径</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E5%B7%B4%E5%BE%B7-%E9%9F%A6%E5%A1%9E%E6%9E%97%E5%85%8B%E6%96%B9%E6%B3%95&pic=1&sug=1&enc=utf8">巴德-韦塞林克方法</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E5%B7%B4%E5%BE%B7-%E9%9F%A6%E5%A1%9E%E6%9E%97%E5%85%8B%E5%88%86%E6%9E%90&pic=1&sug=1&enc=utf8">巴德-韦塞林克分析</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E5%B7%B4%E5%BE%B7-%E9%9F%A6%E5%A1%9E%E6%9E%97%E5%85%8B%E8%B4%A8%E9%87%8F&pic=1&sug=1&enc=utf8">巴德-韦塞林克质量</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/item/%E5%B7%B4%E7%BA%B3%E5%BE%B7%E6%98%9F%E7%B3%BB/4981786">巴纳德星系</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E5%B7%B4%E6%99%AE%E5%A4%A9%E6%96%87%E5%8F%B0&pic=1&sug=1&enc=utf8">巴普天文台</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E5%B7%B4%E6%99%AE%E5%A4%A9%E6%96%87%E5%8F%B0&pic=1&sug=1&enc=utf8">白矮前身星</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E6%96%91%E7%82%B9%E6%B5%8B%E5%85%89&pic=1&sug=1&enc=utf8">斑点测光</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E6%96%91%E7%82%B9%E5%88%86%E5%85%89&pic=1&sug=1&enc=utf8">斑点分光</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E6%96%91%E7%82%B9%E6%8E%A9%E6%A8%A1&pic=1&sug=1&enc=utf8">斑点掩模</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E5%8D%8A%E4%BA%BA%E9%A9%AC%E8%87%82&pic=1&sug=1&enc=utf8">半人马臂</a>
+                </li>
+                <li><a href="https://baike.baidu.com/item/%E5%AE%9D%E7%9B%92%E6%98%9F%E5%9B%A2/2712681">宝盒星团</a></li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E6%9A%B4%E6%80%81%E8%84%89%E5%86%B2%E6%98%9F&pic=1&sug=1&enc=utf8">暴态脉冲星</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E7%88%86%E5%8F%91%E5%91%A8%E6%9C%9F&pic=1&sug=1&enc=utf8">爆发周期</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E5%8C%97%E6%AC%A7%E5%85%89%E5%AD%A6%E6%9C%9B%E8%BF%9C%E9%95%9C&pic=1&sug=1&enc=utf8">北欧光学望远镜</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E5%8C%97%E9%93%B6%E5%86%A0&pic=1&sug=1&enc=utf8">北银冠</a>
+                </li>
+                <li><a href="https://baike.baidu.com/item/%E8%83%8C%E6%99%AF%E6%98%9F%E7%B3%BB/5913579">背景星系</a></li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E8%A2%AB%E5%90%9E%E6%98%9F%E7%B3%BB&pic=1&sug=1&enc=utf8">被吞星系</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E6%9C%AC%E8%BD%AE%E8%BD%A8%E9%81%93&pic=1&sug=1&enc=utf8">本轮轨道</a>
+                </li>
+                <li><a href="https://baike.baidu.com/item/%E6%AF%94%E9%95%BF%E4%BB%AA/9019062">比长仪</a></li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E6%AF%95%E5%9B%A2%E6%98%9F&pic=1&sug=1&enc=utf8">毕团星</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E7%BC%96%E5%8F%B7%E5%B0%8F%E8%A1%8C%E6%98%9F&pic=1&sug=1&enc=utf8">编号小行星</a>
+                </li>
+                <li><a
+                        href="https://baike.baidu.com/searchword/?word=%E7%BC%96%E7%A0%81%E6%8E%A9%E6%A8%A1%E6%88%90%E8%B1%A1&pic=1&sug=1&enc=utf8">编码掩模成象</a>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+    <footer class="ft">
+        <div class="c3">本网站由小艾制作！</div>
+    </footer>
+</body>
+
+</html>
